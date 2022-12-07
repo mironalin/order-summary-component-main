@@ -1,0 +1,161 @@
+:root {
+    --ff-base: 'Red Hat Display', sans-serif;
+
+    --fw-bold: 700;
+    --fw-regular: 500;
+    --fw-ultrabold: 900;
+
+    --clr-primary-pale_blue: hsl(225, 100%, 94%);
+    --clr-primary-bright_blue: hsl(245, 75%, 52%);
+    
+    --clr-neutral-very_pale_blue: hsl(225, 100%, 98%);
+    --clr-neutral-desaturated_blue: hsl(224, 23%, 55%);
+    --clr-neutral-dark_blue: hsl(223, 47%, 23%);
+}
+
+*, *::before,m *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    background-color: var(--clr-primary-pale_blue);
+    color: var(--clr-neutral-desaturated_blue);
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    display: grid;
+    max-width: 375px;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.card-content {
+    margin: 1.5rem;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--fw-ultrabold);
+    color: var(--clr-neutral-dark_blue);
+}
+
+.card-description {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 0.88rem;
+    margin: 1.5rem;
+}
+
+.card-music-plan {
+    background-color: var(--clr-neutral-very_pale_blue);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-music-plan-type {
+    font-weight: var(--fw-ultrabold);
+    font-size: 0.812rem;
+    color: var(--clr-neutral-dark_blue);
+}
+
+.card-music-plan-price {
+    font-size: 0.812rem;
+}
+
+.card-music-plan-description {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    line-height: 1.2rem;
+}
+
+.card-music-plan-description[icon="music"]::before {
+    content: "";
+    width: 48px;
+    height: 48px;
+    background: url(images/icon-music.svg);
+}
+
+.card-music-plan-change {
+    font-size: 0.812rem;
+    text-decoration: underline;
+    color: var(--clr-primary-bright_blue);
+    font-weight: var(--fw-bold);
+}
+
+.card-music-plan-change:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color:hsl(245, 75%, 70%)
+}
+
+.card-payment-flex {
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.card-payment-button {
+    border: none;
+    padding: 1rem 0.5rem;
+    background-color: var(--clr-primary-bright_blue);
+    color: white;
+    border-radius: 0.75rem;
+    font-weight: var(--fw-bold);
+    box-shadow: hsl(245, 75%, 80%) 0px 5px 20px;
+}
+
+.card-payment-button:hover {
+    cursor: pointer;
+    background-color:hsl(245, 75%, 70%)
+}
+
+.card-payment-cancel {
+    background-color: white;
+    border: none;
+    font-weight: var(--fw-ultrabold);
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--clr-neutral-desaturated_blue);
+}
+
+.card-payment-cancel-text:hover {
+    cursor: pointer;
+    color: var(--clr-neutral-dark_blue);
+}
